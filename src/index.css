@@ -17,7 +17,7 @@ html {
   --third-color: #0f3d3e;
   --fourth-color: #100f0f;
   /* accent colors for the main colors */
-  --accent-light: rgb(255, 231, 248);
+  --accent-light: #124f50;
   --accent-lighter: rgb(252, 243, 249);
   --accent-black: rgba(26, 0, 6, 0.733);
   --accent-white: rgba(255, 255, 255, 0.979);

@@ -1,7 +1,16 @@
+/* css for the header */
 .app-header {
   padding: 0.5rem;
   text-align: center;
   font-size: var(--font-size-600);
   border-radius: 0.5rem;
   background-color: var(--third-color);
+}
+
+/* css for the flavor text in the body */
+.app-text {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: var(--font-size-400);
+  color: var(--secondary-color);
 }
