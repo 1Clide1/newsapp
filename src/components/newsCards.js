@@ -23,17 +23,19 @@ function NewsCards() {
                   src={newsData.urlToImage}
                   alt="news article"
                 ></img>
-                <p className="news-card-text">{newsData.title}</p>
-                <p className="news-card-text">Author: {newsData.author}</p>
-                <p className="news-card-text">{newsData.description}</p>
-                <a
-                  className="news-card-link"
-                  href={newsData.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Click Here To View The Article
-                </a>
+                <div className="news-card-text-container">
+                  <p className="news-card-text">{newsData.title}</p>
+                  <p className="news-card-text">Author: {newsData.author}</p>
+                  <p className="news-card-text">{newsData.description}</p>
+                  <a
+                    className="news-card-link"
+                    href={newsData.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Click Here To View The Article
+                  </a>
+                </div>
               </div>
             );
           })

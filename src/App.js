@@ -6,6 +6,8 @@ import { createContext, useState } from "react";
 import NewsSearchBar from "./components/searchNews";
 // import the news cards component
 import NewsCards from "./components/newsCards";
+// import react loader spinner
+import { InfinitySpin } from "react-loader-spinner";
 
 // creating the context for the news api
 export const newsAPI = createContext();
@@ -13,6 +15,7 @@ function App() {
   // creating state to hold the news api data
   const [newsAPIData, setNewsAPIData] = useState();
   const [loading, setLoading] = useState();
+  console.log(loading);
 
   return (
     // wrapping all of the app's code with the context api, using state to store the data of the news api search results
@@ -29,6 +32,7 @@ function App() {
         </p>
         <NewsSearchBar />
         <NewsCards />
+        {loading === true ? <InfinitySpin width="400" color="#124f50" /> : null}
       </div>
     </newsAPI.Provider>
   );

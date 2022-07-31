@@ -2,7 +2,7 @@
 .submit-btn {
   border-radius: 0 0.3rem;
   font-size: var(--font-size-500);
-  color: var(--accent-lighter);
+  color: var(--accent-white);
   background-color: var(--accent-light);
 }
 .search-bar-container {

@@ -58,7 +58,7 @@ function NewsSearchBar() {
           onChange={handleSearchBar}
           defaultValue={search}
         />
-        <button className="submit-btn" type="submit">
+        <button className="submit-btn" type="submit" aria-label="search button">
           <i className="lni lni-search-alt"></i>
         </button>
       </form>

@@ -21,9 +21,15 @@
   font-size: var(--font-size-300);
   font-weight: 300;
   color: var(--primary-color);
+  margin-bottom: 0.3rem;
 }
-
+/* css for the href */
 .news-card-link {
   text-decoration: none;
   color: var(--secondary-color);
+}
+/* css for the container that grouped the text up */
+.news-card-text-container {
+  background-color: var(--accent-lighter);
+  border-radius: 0.2rem;
 }
