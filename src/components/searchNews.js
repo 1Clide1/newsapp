@@ -40,7 +40,7 @@ function NewsSearchBar() {
       articleData.sort(function (a, b) {
         return a.title.localeCompare(b.title);
       });
-      // set the news data to the global state
+      // set the news data to the global state.
       setNewsAPIData(articleData);
       setLoading(true);
     } catch (err) {
