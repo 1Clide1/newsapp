@@ -32,7 +32,13 @@ function App() {
         </p>
         <NewsSearchBar />
         <NewsCards />
-        {loading === true ? <InfinitySpin width="400" color="#124f50" /> : null}
+        {loading === true ? (
+          // adding the div helps me align the loading animation to the center sadly does not seem like i can increase the size since the width really does not inscrease size at all.
+          // at least not on mobile
+          <div className="loading-animation">
+            <InfinitySpin width="400" color="#124f50" />
+          </div>
+        ) : null}
       </div>
     </newsAPI.Provider>
   );

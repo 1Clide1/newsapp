@@ -8,10 +8,13 @@ import "./news-cards.css";
 
 function NewsCards() {
   const { newsAPIData, loading, setLoading } = useContext(newsAPI);
-  // creating some state to activate the cards
-  if (loading === true) {
-    setLoading(false);
-  }
+  // using a set time out that way you can actually see the loading animation
+  setTimeout(() => {
+    // creating some state to activate the cards
+    if (loading === true) {
+      setLoading(false);
+    }
+  }, 1000);
   return (
     <>
       {loading === false

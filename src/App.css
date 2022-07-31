@@ -17,3 +17,9 @@
   font-weight: 300;
   color: var(--secondary-color);
 }
+
+/* css for loading animation */
+.loading-animation {
+  display: inline-block;
+  margin-left: 6.5rem;
+}
