@@ -10,7 +10,7 @@ import "./search-news.css";
 
 function NewsSearchBar() {
   // using the set state from the context api
-  const { setNewsAPIData } = useContext(newsAPI);
+  const { setNewsAPIData, setLoading } = useContext(newsAPI);
   //   creating some state to hold the user's search query
   const [search, setSearch] = useState("");
   //   getting the search that the user typed in from the search bar
@@ -28,8 +28,21 @@ function NewsSearchBar() {
         throw new Error("api call went wrong");
       }
       const articles = await response.json();
-      const articleData = articles;
+      // mapping this now that way I can acess the data for the cards in the future
+      const articleData = articles.articles.map((newsData) => ({
+        author: newsData.author,
+        title: newsData.title,
+        url: newsData.url,
+        urlToImage: newsData.urlToImage,
+        description: newsData.description,
+      }));
+      // algorithm to sort the data by title. problem right now, if there are special characters like ' then it starts first.
+      articleData.sort(function (a, b) {
+        return a.title.localeCompare(b.title);
+      });
+      // set the news data to the global state
       setNewsAPIData(articleData);
+      setLoading(true);
     } catch (err) {
       console.error(err);
     }
@@ -46,7 +59,7 @@ function NewsSearchBar() {
           defaultValue={search}
         />
         <button className="submit-btn" type="submit">
-          search here
+          <i className="lni lni-search-alt"></i>
         </button>
       </form>
     </>
