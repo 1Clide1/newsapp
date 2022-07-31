@@ -1,0 +1,29 @@
+/* css for the card container */
+.news-card-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  width: 80%;
+  margin-top: 0.5rem;
+  margin-inline: auto;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  background-color: var(--third-color);
+}
+/* css for the card images */
+.news-image-card {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+/* css for the text of the cards */
+.news-card-text {
+  font-size: var(--font-size-300);
+  font-weight: 300;
+  color: var(--primary-color);
+}
+
+.news-card-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
