@@ -33,7 +33,7 @@ API:
 <li>News Api</li>
 </ul> 
 NPMS: 
-<ol>
+<ul>
 <li>React Loader Spinner</li>
 </ul> 
   
